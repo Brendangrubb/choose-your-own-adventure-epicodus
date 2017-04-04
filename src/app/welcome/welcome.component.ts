@@ -55,14 +55,11 @@ export class WelcomeComponent implements OnInit {
     }
   }
 
-  createUser(userName, character, picture) {
-    if (character === 'nerd') {
-      this.nerdAvatar = true;
-    }
+  createUser(userName, character) {
+
 
     console.log(userName);
     console.log(character);
-    console.log(picture);
   }
 
   constructor() { }
