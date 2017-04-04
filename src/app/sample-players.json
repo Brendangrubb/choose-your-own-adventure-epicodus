@@ -1,0 +1,10 @@
+{ "players": [{
+    "userName": "Felix",
+    "characer": "nerd",
+    "points": 150
+    }, {
+    "userName": "Brendan",
+    "characer": "cool",
+    "points": 180
+    }]
+}

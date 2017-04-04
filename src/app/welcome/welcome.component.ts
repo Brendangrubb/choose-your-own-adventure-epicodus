@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from './../player.model';
-
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { PlayerService } from '../player.service';
 
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
+  providers: [PlayerService]
 })
 export class WelcomeComponent implements OnInit {
   nerdAvatar = false;
@@ -62,10 +64,11 @@ export class WelcomeComponent implements OnInit {
     this.playerNoCreated = false;
     this.playerCreated = true;
     console.log(newPlayer);
+    this.playerService.addPlayer(newPlayer);
 
   }
 
-  constructor() { }
+  constructor( private playerService: PlayerService) { }
 
   ngOnInit() {
   }
