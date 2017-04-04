@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { PlayerComponent } from './player/player.component';
+import { FirstLevelComponent } from './first-level/first-level.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     WelcomeComponent,
     HeaderComponent,
-    PlayerComponent
+    PlayerComponent,
+    FirstLevelComponent
   ],
   imports: [
     BrowserModule,

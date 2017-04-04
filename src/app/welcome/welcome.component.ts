@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Player } from './../player.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { PlayerService } from '../player.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -63,12 +64,13 @@ export class WelcomeComponent implements OnInit {
     var newPlayer: Player = new Player(userName, character);
     this.playerNoCreated = false;
     this.playerCreated = true;
-    console.log(newPlayer);
     this.playerService.addPlayer(newPlayer);
+    this.router.navigate(['userName', userName]);
+  };
 
-  }
 
-  constructor( private playerService: PlayerService) { }
+
+  constructor( private playerService: PlayerService, private router: Router) { }
 
   ngOnInit() {
   }
