@@ -14,6 +14,8 @@ export class WelcomeComponent implements OnInit {
   overachieverAvatar = false;
   workhorseAvatar = false;
   coolAvatar = false;
+  playerNoCreated = true
+  playerCreated = false;
 
   onChange(value) {
     if (value === 'nerd') {
@@ -56,10 +58,11 @@ export class WelcomeComponent implements OnInit {
   }
 
   createUser(userName, character) {
+    var newPlayer: Player = new Player(userName, character);
+    this.playerNoCreated = false;
+    this.playerCreated = true;
+    console.log(newPlayer);
 
-
-    console.log(userName);
-    console.log(character);
   }
 
   constructor() { }

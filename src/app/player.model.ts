@@ -3,6 +3,5 @@ export class Player {
 
   constructor(
     public userName: string,
-    public character: string,
-    public id: number) { }
+    public character: string) { }
 }

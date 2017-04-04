@@ -6,7 +6,11 @@ const appRoutes: Routes = [
   {
     path: '',
     component: WelcomeComponent
-  }
+  },
+  // {
+  //   path: 'playerAdd:id',
+  //   component:
+  // }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
