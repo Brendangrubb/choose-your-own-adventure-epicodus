@@ -4,6 +4,5 @@ export class Player {
   constructor(
     public userName: string,
     public character: string,
-    public picture: string,
     public id: number) { }
 }
