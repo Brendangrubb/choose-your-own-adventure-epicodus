@@ -1,8 +1,9 @@
 export class Player {
+  points = 100;
+
   constructor(
-    public name: string,
+    public userName: string,
     public character: string,
     public picture: string,
-    public points: number,
-    public id: number)
+    public id: number) { }
 }

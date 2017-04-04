@@ -7,6 +7,6 @@ const appRoutes: Routes = [
     path: '',
     component: WelcomeComponent
   }
-]
+];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
